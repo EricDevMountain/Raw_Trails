@@ -1,0 +1,49 @@
+--CREATE TABLE users (
+--  id SERIAL PRIMARY KEY,
+--  first_name varchar(30),
+--  last_name varchar(30),
+--  email varchar(50), 
+--  image text,
+--  is_admin varchar(20),
+--  is_owner varchar(20),
+--  date_available varchar(500),
+--  date_unavailable varchar(500),
+--  auth_id text 
+--);
+
+
+--CREATE TABLE reviews (
+--  id SERIAL PRIMARY KEY,
+--  review varchar(500),
+--  image_one text,
+--  image_two text,
+--  image_three text,
+--  image_four text,
+--  image_five text,
+--  user_id integer,
+-- FOREIGN KEY (user_id) REFERENCES users(id)
+--);
+
+--CREATE TABLE trips (
+--  id SERIAL PRIMARY KEY,
+--  name varchar(50),
+--  image_one text,
+--  image_two text,
+--  image_three text,
+--  image_four text,
+--  image_five text,
+--  user_id integer,
+--  gear_id integer,
+-- FOREIGN KEY (user_id) REFERENCES users(id),
+-- FOREIGN KEY (gear_id) REFERENCES gear(id)
+--);
+
+--CREATE TABLE gear (
+--id SERIAL PRIMARY KEY,
+--  name varchar(50),
+--  image_one text,
+--  description varchar(300),
+--  condition varchar(300),
+--  user_id integer,
+--  FOREIGN KEY (user_id) REFERENCES users(id)
+--)
