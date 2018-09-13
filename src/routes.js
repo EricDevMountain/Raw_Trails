@@ -13,13 +13,13 @@ import Header from "./components/Header/Header";
 export default (
   <Switch>
     <Route component={Home} exact path="/" />
-    <Route component={About} exact path="/about" />
-    <Route component={Insta} exact path="/insta" />
-    <Route component={PlanTrip} exact path="/plantrip" />
-    <Route component={QuizOne} exact path="/quizone" />
-    <Route component={QuizTwo} exact path="/quiztwo" />
-    <Route component={QuizThree} exact path="/quizthree" />
-    <Route component={Reviews} exact path="/reviews" />
-    <Route component={Header} exact path="/header" />
+    <Route component={About} path="/about" />
+    <Route component={Insta} path="/insta" />
+    <Route component={PlanTrip} path="/plantrip" />
+    <Route component={QuizOne} path="/quizone" />
+    <Route component={QuizTwo} path="/quiztwo" />
+    <Route component={QuizThree} path="/quizthree" />
+    <Route component={Reviews} path="/reviews" />
+    <Route component={Header} path="/header" />
   </Switch>
 );

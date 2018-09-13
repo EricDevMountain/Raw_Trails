@@ -9,7 +9,7 @@ const getReviews = (req, res, naxt) => {
 
 const postReview = (req, res, next) => {
   const db = req.app.get("db");
-  db.postReview([req.body.text])
+  db.postReview([req.body.text, req.user.id])
     .then(response => {
       res.status(200).json(response);
     })
@@ -18,7 +18,7 @@ const postReview = (req, res, next) => {
 
 const putReview = (req, res, next) => {
   const db = req.app.get("db");
-  db.putReview([req.params.id, req.body.text])
+  db.putReview([req.body.text, req.params.id])
     .then(response => {
       res.status(200).json(response);
     })

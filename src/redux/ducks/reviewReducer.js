@@ -45,7 +45,6 @@ export const deleteReview = reviewid => {
 //REDUCER
 
 export default function reducer(state = initialState, action) {
-  console.log(action.type, action.payload);
   switch (action.type) {
     case `${GET_REVIEWS}_PENDING`:
       return { ...state, loading: true, error: null };
@@ -67,7 +66,7 @@ export default function reducer(state = initialState, action) {
     case `${ADD_REVIEW}_FULFILLED`:
       return {
         ...state,
-        reviews: action.payload,
+        reviews: action.payload.data,
         loading: false,
         error: null
       };
@@ -82,7 +81,7 @@ export default function reducer(state = initialState, action) {
     case `${UPDATE_REVIEW}_FULFILLED`:
       return {
         ...state,
-        reviews: action.payload,
+        reviews: action.payload.data,
         loading: false,
         error: null
       };
@@ -97,7 +96,7 @@ export default function reducer(state = initialState, action) {
     case `${DELETE_REVIEW}_FULFILLED`:
       return {
         ...state,
-        reviews: action.payload,
+        reviews: action.payload.data,
         loading: false,
         error: null
       };
